@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DC_ADRIA.iml" filepath="$PROJECT_DIR$/.idea/DC_ADRIA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DC_BACKEND/DC_BackEnd.iml" filepath="$PROJECT_DIR$/DC_BACKEND/DC_BackEnd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proxy-service/proxy-service.iml" filepath="$PROJECT_DIR$/proxy-service/proxy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register-service/register-service.iml" filepath="$PROJECT_DIR$/register-service/register-service.iml" />
+    </modules>
+  </component>
+</project>

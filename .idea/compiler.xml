@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-service" />
+        <module name="proxy-service" />
+        <module name="DC_BackEnd" />
+        <module name="register-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-service" target="1.8" />
+      <module name="DC_BackEnd" target="1.8" />
+      <module name="proxy-service" target="1.8" />
+      <module name="register-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DC_BackEnd" options="-parameters" />
+      <module name="config-service" options="-parameters" />
+      <module name="proxy-service" options="-parameters" />
+      <module name="register-service" options="-parameters" />
+    </option>
+  </component>
+</project>
