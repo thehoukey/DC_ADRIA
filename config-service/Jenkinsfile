@@ -37,7 +37,7 @@ pipeline {
                 {
                     steps{
                         script {
-                           dir ('customer-service'){
+                           dir ('config-service'){
                             def app = docker.build "localhost:5000/config-service"
                             app.push()
                             }
