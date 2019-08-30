@@ -1,0 +1,58 @@
+pipeline {
+
+    agent any
+
+    tools {
+        maven 'maven'
+    }
+
+
+
+    stages {
+        stage('Clone code')
+        {
+            steps{
+                git url: 'https://github.com/thehoukey/DC_ADRIA.git'
+            }
+        }
+
+        stage('Build code')
+        {
+            steps {
+                sh "mvn -DskipTests=true clean package -P docker"
+            }
+        }
+
+
+        stage('Docker')
+        {
+            parallel {
+                stage('Remove container')
+                {
+                    steps{
+                        sh 'docker stop config-service || true && docker rm config-service || true '
+                    }
+                }
+                stage('Build image')
+                {
+                    steps{
+                        script {
+                            def app = docker.build "localhost:5000/config-service"
+                            app.push()
+                        }
+                    }
+                }
+            }
+        }
+
+        stage ('Run docker image')
+        {
+            steps{
+                script {
+                    docker.image("localhost:5000/config-service").run('-m 512MB -p 8888:8888 -h config-service  --name config-service')
+                }
+            }
+        }
+
+    }
+}

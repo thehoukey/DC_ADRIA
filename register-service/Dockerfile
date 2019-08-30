@@ -1,4 +1,4 @@
-FROM openjdk
+FROM openjdk:8u131
 MAINTAINER Hakim Arhazzal <hakim.arhazzal@gmail.com>
 ADD target/register-service.jar register-service.jar
 ENV springprofiles="" \
