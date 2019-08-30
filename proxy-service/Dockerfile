@@ -1,5 +1,5 @@
 FROM openjdk
 MAINTAINER Hakim Arhazzal <hakim.arhazzal@gmail.com>
-ADD target/proxy-service-0.0.1-SNAPSHOT.jar proxy-service-0.0.1-SNAPSHOT.jar.jar
-ENTRYPOINT ["java", "-jar", "/proxy-service-0.0.1-SNAPSHOT.jar"]
+ADD target/proxy-service.jar proxy-service.jar
+ENTRYPOINT ["java", "-jar", "/proxy-service.jar"]
 EXPOSE 8761
